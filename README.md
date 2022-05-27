@@ -4,11 +4,11 @@ Roster Generator is a program that allows users to select players they think wil
 
 To run the script, run the main.py file.  The input_files folder must contain a file called players.csv and a file called projections.cvs.  Provided in the input_files folder are three sample files that can be used to populate the players.csv file, a players.csv file that is populated with the small data set out of the box and a projection.csv file that is aligned to match the data set with some missing to show how the program functions when players cannot be found.
 
-For a more detailed description of the script check out:
+For a detailed description check out:
 
 https://docs.google.com/document/d/1333TFeV7DedCE99hIfSmBQojP7wf0ZTLO55LheLRMIk/edit
 
 
-For see a user journey check out:
+For a detailed user journey check out:
 
 https://docs.google.com/document/d/134FuRuBOJXWAUk5J5-P_wciMgdcBIPbb0f8prihRWmU/edit#
