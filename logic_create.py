@@ -100,14 +100,22 @@ def check_for_zero_projection():
     print("")
     print("The following players are on the players.csv file but cannot be found on the projections.csv file")
     print("")
+    lcl_count = 0
+    
     for player in all_players:
         if player.projection == 0:
             print(player.name)
-    print("")
-    print("Press 1 to continue and represent their projections as 0")
-    print("Press 2 to quit this program and correct this issue")
-    print("")
-    return input("Enter Selection: ")
+            lcl_count += 1
+    
+    if lcl_count == 0:
+        print("All players from the players.csv file have been found.  The script is now running...")
+        return 1
+    else:
+        print("")
+        print("Press 1 to continue and represent their projections as 0")
+        print("Press 2 to quit this program and correct this issue")
+        print("")
+        return input("Enter Selection: ")
 
 
 
@@ -359,6 +367,7 @@ def tally_players():
 
 def run_create():
     read_csv_files()
+
     if check_for_zero_projection() == 1:
         if set_combos() == 1:
             create_player_combos()
