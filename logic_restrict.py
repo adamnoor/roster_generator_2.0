@@ -46,7 +46,7 @@ def select_qb_display():
         print("Select " + str(count + 1) + " to build around " + qb)
     
     print("")
-    user_input =  input("Select a quarterback: ")
+    user_input =  int(input("Select a quarterback: "))
     if user_input <= 0:
         pass
     elif user_input <= len(quarterbacks):
@@ -93,7 +93,7 @@ def select_restrictions_display():
     print("Select 1 to restrict rosters by excluding a player")
     print("Select 2 to quit without writing a csv")
     print("")
-    user_input = input("Select an option: ")
+    user_input = int(input("Select an option: "))
 
     if user_input == 0:
         player_restriction_display("include")
@@ -114,7 +114,7 @@ def player_restriction_display(type):
             print("Select " + str(count) + " to " + type + " " + player + 
             "- currently on " + str(current_players_map[player]) + " rosters")
     print("")
-    user_input = input("Select a player: ")
+    user_input = int(input("Select a player: "))
     if user_input >= 0 and user_input < len(current_players_list):
         if current_players_list[user_input] is not None:
             procede = True
@@ -142,13 +142,9 @@ def player_restriction_display(type):
         else:
             print("This is not a posiblity with the restrictions you've selected.")
             print("")
-            #ui = input("Select 0 to try again with another player, select 1 to continue wothout resticting further: ")
             excluded_players.pop()
             player_restriction_display(type)
-            # if ui == 0:
-            #     player_restriction_display(type)
-            # else:
-            #     write_restrict_quit_display()
+         
         
    
 def write_restrict_quit_display():
@@ -189,7 +185,7 @@ def write_restrict_quit_display():
     print("Select 2 to write a csv file of the rosters and end the program")
     print("Select 3 to quit and NOT write a csv file")
     print("")
-    user_input = input("Select an option: ")
+    user_input = int(input("Select an option: "))
 
     if user_input == 0:
         select_restrictions_display()

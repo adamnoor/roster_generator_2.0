@@ -111,11 +111,12 @@ def check_for_zero_projection():
         print("All players from the players.csv file have been found.  The script is now running...")
         return 1
     else:
+
         print("")
         print("Press 1 to continue and represent their projections as 0")
         print("Press 2 to quit this program and correct this issue")
         print("")
-        return input("Enter Selection: ")
+        return int(input("Enter Selection: "))
 
 
 
@@ -168,7 +169,7 @@ def set_combos():
     print("Select 1 if you would like to continue")
     print("Select 2 to quit if this is too many combinations and you'd like to reduce the number of players")
     print("")
-    return input("Enter Selection: ")
+    return int(input("Enter Selection: "))
 
 
 def create_player_combos():

@@ -12,7 +12,7 @@ if path:
     print("Select 1 to rewrite the files")
     print("Select 2 to use these files to start building stacks")
     print("")
-    user_input = input("Make a selection: ")
+    user_input = int(input("Make a selection: "))
     if user_input == 1:
         run_create()
     elif user_input == 2:
